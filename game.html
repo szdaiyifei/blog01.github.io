@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gbk">
+<title>个人博客</title>
+<link  href="css/base.css" rel="stylesheet">
+<link  href="css/game.css" rel="stylesheet">
+</head>
+
+<body>
+<article>
+<div class="container">
+  <div class="blog" data-scroll-reveal="enter top" >
+    <div class="scores">
+      <div class="score-container best-score"> 最佳:
+        <div class="score">
+          <div id="bestScore">0</div>
+        </div>
+      </div>
+      <div class="score-container"> 分数:
+        <div class="score">
+          <div id="score">0</div>
+          <div class="add" id="add"></div>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div id="tile-container" class="tile-container"></div>
+      <div class="end" id="end">游戏结束
+        <button class="btn not-recommended__item js-restart-btn" id="try-again">再试一次</button>
+      </div>
+    </div>
+    <div class="not-recommended">
+      <button class="btn not-recommended__item js-restart-btn" id="restart">重新启动游戏</button>
+    </div>
+  </div>
+</div>
+<script src="js/game.js"></script>
+</body>
+</html>

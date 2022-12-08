@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>博客</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="bigbox">
+      <div id="banner">
+        <h2>小火龙的博客</h2>
+        <div id="max">
+          <div class="re">
+            <ul>
+              <li><img src="./images/1.jpg" alt="" /></li>
+              <li><img src="./images/1.png" alt="" /></li>
+              <li><img src="./images/3.png" alt="" /></li>
+              <li><img src="./images/7.jpg" alt="" /></li>
+              <li><img src="./images/4.png" alt="" /></li>
+            </ul>
+            <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <a class="dangqian" href="index.html">首页</a>
+        <a href="">文章分类</a>
+        <!-- <a href="rizhi.html">分类</a> -->
+        <a href="liuyan.html">留言板</a>
+        <!-- <a href="liuyan.html">友情链接</a> -->
+        <a href="game.html">小游戏</a>
+        <a style="float: right" href="denglu.html">登录 注册</a>
+        <!-- <a style="float: right" href="">注册</a> -->
+      </nav>
+      <div id="main">
+        <div id="main_left">
+          <h2>关于作者</h2>
+          <div id="jianjie">
+            <img src="images/2.jpg" alt="" />
+            <span style="color: bisque">座右铭:</span>
+            <ul>
+              <li>keep learning</li>
+              <li>keep writing</li>
+              <li>keep coding</li>
+            </ul>
+          </div>
+          <p>
+            <span>爱好</span>:听歌 运动 打游戏<br />
+            <span>性格</span>:乐观 个性 喜欢钻研<br />
+            <span>家乡</span>:江苏苏州<br />
+            <span>专业</span>:计算机科学与技术
+            <iframe
+              frameborder="no"
+              border="0"
+              marginwidth="0"
+              marginheight="0"
+              width="100%"
+              height="130"
+              src="mp3/G.E.M.邓紫棋 - 光年之外.mp4"
+            >
+            </iframe>
+          </p>
+        </div>
+        <div id="main_right">
+          <h2>随笔摘抄</h2>
+          <p>
+            一、岁月从来不曾静好，只是有人在替你背负枷锁，含泪前行。也许是父母，也许是朋友，也许是陌生人……无论是谁，请记得常怀感恩之心。
+          </p>
+          <p>
+            二、这个世界并不完美，甚至有点残酷。你无法决定下一段旅途遇见的是好事还是坏事，可你能决定面对它们的态度。你看这个世界的角度，决定了这个世界给你的温度。
+          </p>
+          <p>
+            三、总会有一件事让你瞬间长大，也总会有一个人让你泪如雨下。愿你早日领教这个世界的深深恶意，让自己活得开心得意。
+          </p>
+          <p>
+            四、想要与众不同，却总随遇而安，想要做很多未做的事，却在现实棘手的吃喝拉撒前低下了头，我们间歇性热血满腔，长时间迷茫犯懒，别等了，再努力试试看！
+          </p>
+          <img src="images/9.jpg" alt="" />
+        </div>
+      </div>
+      <div id="wen">
+        <h2>我的文章</h2>
+        <div>
+          <div id="picture">
+            <img src="images/小车.jpg" alt="" />
+            <p><a href="小车.html">无人小车</a></p>
+          </div>
+          <div id="picture">
+            <img src="images/web.jpg" alt="" />
+            <p><a href="">Web前端</a></p>
+          </div>
+          <div id="picture">
+            <img src="images/java.png" alt="" />
+            <p><a href="java.html">Java</a></p>
+          </div>
+          <div id="picture">
+            <img src="images/python.png" alt="" />
+            <p><a href="">Python</a></p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div id="left">小火龙版权所有©</div>
+
+        <div id="right">
+          站点声明：本网站部分资源来源于互联网，如有侵权请联系站长删除，所有文章转载需说明出处，如有违反将追究法律责任，举报邮箱：2534644853@qq.com
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.onload = function () {
+        var box = this.document.getElementsByClassName("re")[0];
+        var lik = box.getElementsByTagName("li");
+        function fun(i, j) {
+          //转换图片函数，就是把透明度改了一下
+          lik[i].style.opacity = 1;
+          lik[j].style.opacity = 0;
+          lik[i + 5].style.backgroundColor = "#ffffff"; //改一下小图标
+          lik[j + 5].style.backgroundColor = "#00000000";
+        }
+        fun(0, 1); //初始化下
+        var i = 0;
+        function auto() {
+          //轮播循环函数
+          if (++i >= 5) {
+            i = 0;
+            fun(0, 4);
+          } else fun(i, i - 1);
+        }
+        timer = this.setInterval(auto, 2000);
+        box.onmouseover = function () {
+          //鼠标划上去，停止轮播
+          console.log("good");
+          clearInterval(timer);
+        };
+        box.onmouseout = function () {
+          //鼠标划出，继续轮播
+          timer = setInterval(auto, 2000); //调用定时器
+        };
+        var j = 0;
+        for (; j < 5; j++) {
+          //点击小图标也可以转换图片
+          lik[j + 5].ind = j;
+          lik[j + 5].onclick = function () {
+            fun(this.ind, i);
+            i = this.ind;
+          };
+        }
+      };
+    </script>
+  </body>
+</html>

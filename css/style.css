@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+body {
+    /* background-color: #4B7C99; */
+    background: url(../images/2.png)
+}
+
+#bigbox {
+    width: 1000px;
+    margin: 0 auto;
+    
+}
+
+#banner h2{
+    text-align: center;
+    color: white;
+    background-color: #1a9be6;
+    width: 1000px;
+}
+
+#banner {
+    /* background-color: #1a9be6; */
+    width: 900px;
+    /* height: 200px; */
+    font-size: 0px;
+}
+
+#banner img {
+    width: 1000px;
+    height: 300px;
+    object-fit: cover;
+    /* 注意裁剪的属性 */
+}
+
+nav {
+    background-color: #CCD0D9;
+    width: 1000px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    line-height: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #020C16;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1a9be6;
+}
+
+.dangqian {
+    color: #1a9be6;
+
+}
+
+#main {
+    height: 490px;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #86aacb;
+}
+
+#main_left {
+    width: 300px;
+    display: inline-block;
+    background-color: #86aacb;
+    float: left;
+}
+
+h2 {
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: rgb(182, 116, 245);
+    color: #CCD0D9;
+}
+
+#jianjie{
+    height: 150px;
+    width: 300px;
+}
+
+#jianjie img {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+#jianjie ul {
+    color: rgb(147, 132, 160);
+    font-family:Arial, Helvetica, sans-serif
+
+}
+#jianjie ul li{
+   margin-bottom: 20px;
+}
+
+#main_left p {
+    margin-left: 10px;
+    line-height: 40px;
+}
+
+#main_left span {
+    font-weight: bold;
+}
+
+#main_right {
+    position: relative;
+    width: 680px;
+    margin-left: 20px;
+    display: inline-block;
+    height: 200px;
+}
+
+#main_right img {
+    position: absolute;
+    width: 260px;
+    right: 0px;
+    top: 30px;
+}
+
+#main_right p {
+    width: 400px;
+    display: inline-block;
+    margin-left: 10px;
+    text-indent: 32px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+#wen {
+    background-color: #86aacb;
+    width: 1000px;
+}
+
+#wen div {
+    font-size: 0px;
+}
+
+#picture {
+    font-size: 0px;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+#picture img {
+    width: 200px;
+    height: 120px;
+}
+
+#picture p {
+    font-size: 16px;
+    text-align: center;
+    line-height: 60px;
+
+}
+
+#picture p a{
+    text-decoration: none;
+}
+
+footer {
+    color: white;
+    line-height: 60px;
+    font-size: 16px;
+    /* text-align: center; */
+    background-color: #1a1a1a;
+}
+
+footer span{
+    padding-left: 20px;
+}
+
+footer div{
+    text-align: center;
+}
+
+#main_right ul li {
+    width: 660px;
+    margin-left: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+}
+
+#main_right ul li span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#liuyan {
+    width: 660px;
+    margin-left: 10px;
+    margin: 20px;
+}
+
+#liuyan span {
+    display: inline-block;
+    width: 80px;
+    line-height: 40px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-left: 80px;
+}
+#max{
+    width: 900px;
+    height: 280px;
+    align-items: center;
+    /* margin: 5% 5%; */
+    margin-top: 0%;
+    /* margin-left: 300px; */
+  }
+  .re{
+    /* position: relative; */
+    /* align-items: center; */
+    margin-top: 0%;
+    height: 300px;
+  }
+  .re ul{
+    list-style-type:none ;
+  }
+  .re ul>li{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    transition: 1s;
+    opacity: 0;
+  }
+  .re ul>li img{
+    width: 900px;
+    height: 500px;
+    /* border-radius: 10%; */
+    /* border: 15px solid #fffbd6; */
+  }
+  #max ol {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5,75px);
+    grid-template-rows: auto;
+    grid-gap: 1em;gap: 1em;
+    float: right;
+    margin-top: 200px;
+    list-style: none;
+    top:0;left:0;
+    opacity: 0.01;
+  }
+#max ol li {
+  width: 25px;
+  height: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  float: left;
+  text-align: center;
+  border-radius: 2em;
+  border: 5px solid #999999;
+}
